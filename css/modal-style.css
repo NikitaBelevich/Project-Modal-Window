@@ -3,7 +3,65 @@ html, body {
 }
 
 body {
+  height: 5000px;
   margin: 15px;
-  font-size: 1.1rem;
   background-color: #e4e4e4;
+}
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.473);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+.modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 350px;
+  height: 450px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #c3ece2;
+  border: 3px solid #24d2a6;
+  -webkit-box-shadow: 1px 1px 12px 1px #000;
+          box-shadow: 1px 1px 12px 1px #000;
+}
+
+.hide-modal {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.close-modal {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 25px;
+  height: 25px;
+  line-height: 13px;
+  padding: 0;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 2.3rem;
+  cursor: pointer;
+  -webkit-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+
+.close-modal:hover {
+  text-shadow: 0 0 2px #000;
 }

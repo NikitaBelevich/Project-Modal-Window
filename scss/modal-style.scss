@@ -2,9 +2,59 @@ html, body {
     font-family: sans-serif;
 }
 body {
-    // height: 5000px;
+    height: 5000px;
     margin: 15px;
-    font-size: 1.1rem;
+    // font-size: 1.1rem;
     background-color: rgb(228, 228, 228);
 }
 
+
+
+.modal-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: hsla(0, 0%, 0%, 0.473);
+    opacity: 1;
+    visibility: visible;
+    transition: .25s ease-out;
+}
+.modal-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #c3ece2;
+    border: 3px solid #24d2a6;
+    box-shadow: 1px 1px 12px 1px #000;
+}
+.hide-modal {
+    visibility: hidden;
+    opacity: 0;
+}
+.close-modal {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transform: rotate(45deg);
+    width: 25px;
+    height: 25px;
+    line-height: 13px;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 2.3rem;
+    cursor: pointer;
+    transition: .25s ease-out;
+    &:hover {
+        text-shadow: 0 0 2px #000;
+    }
+}
