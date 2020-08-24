@@ -26,13 +26,14 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
+    box-sizing: border-box;
     transform: translate(-50%, -50%);
     width: 350px;
-    height: 450px;
-    padding: 10px;
+    height: 520px;
+    padding: 50px 30px 10px 30px;
     border-radius: 5px;
-    background: #c3ece2;
-    border: 3px solid #24d2a6;
+    background: #fafffe;
+    border: 2px solid #45cba9;
     box-shadow: 1px 1px 12px 1px #000;
 }
 .hide-modal {
@@ -41,21 +42,153 @@ body {
 }
 .close-modal {
     position: absolute;
-    right: 4px;
-    top: 4px;
+    right: -12px;
+    top: -12px;
     transform: rotate(45deg);
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     line-height: 7px;
     padding: 0;
-    border: none;
-    background: none;
+    border: 2px solid #45cba9;
+    border-radius: 2em;
+    background: #fff;
     outline: none;
-    font-size: 2.3rem;
+    color: #45cba9;
+    font-size: 32px;
+    text-align: center;
+    box-shadow: 0px 0px 2px #000;
     cursor: pointer;
     transition: .25s ease-out;
     &:hover {
-        text-shadow: 0 0 2px #000;
+        box-shadow: 0px 0px 4px #000;
+        text-shadow: 0 0 1px #000;
+    }
+    &:focus {
+        outline: none;
     }
 }
 
+.form-modal__section1 {
+    & input:not(:first-child) {
+        margin-top: 40px;
+    }
+}
+
+.form-modal_input {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #c9c9c9;
+    background: transparent;
+    font-size: 1rem;
+    transition: .2s ease-out;
+
+    &::placeholder {
+        color: #a8a8a8;
+    }
+    &:focus {
+        border-bottom: 2px solid #919191;
+    }
+}
+
+.form-modal__section2 {
+    display: flex;
+    margin-top: 40px;
+    & div {
+        flex-basis: 50%;
+    }
+}
+.form-modal_radio {
+    display: flex;
+    flex-direction: column;
+    color: #a8a8a8;
+    & label {
+        cursor: pointer;
+    }
+    & label:not(:first-child) {
+        margin-top: 6px;
+    }
+}
+.form-modal_birth-inp {
+    align-self: center;
+}
+// Стилизация бутстраповских радио
+.custom-control-label::before {
+    border: 2px solid #919191;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #2ac39c;
+    background-color: #fff;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-image: none;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #2ac39c;
+    border-radius: 2em;
+    transform: translate(4.2px, 4px);
+}
+
+.form-modal__section3 {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    color: #a8a8a8;
+    & div:not(:first-child) {
+        margin-left: 15px;
+    }
+    // Снова переопределение бутстраповских радио только длоя 3 секции
+    .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: #2ac39c;
+        background-color: #2ac39c;
+    }
+    .custom-control-label::before {
+        border: none;
+        background: #b8b8b8;
+    }
+    .custom-switch .custom-control-label::after {
+        top: calc(.25rem + -1px);
+        left: calc(-2.25rem + -1px);
+        width: calc(1rem - -2px);
+        height: calc(1rem - -2px);
+        background-color: #d4d4d4;
+        box-shadow: 0px 2px 6px -2px #000;
+    }
+}
+.form-modal__small-rules {
+    font-size: .8rem;
+    > a {
+        text-decoration: underline;
+    }
+}
+
+.form-modal__section4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.form-modal__submit {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2ac3b3;
+    color: rgb(238, 238, 238);
+    font-size: .9rem;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 7px -2px #000;
+    transition: .2s ease-out;
+    &:hover {
+        background-color: #15b9a9;
+        box-shadow: 0px 2px 7px -1px #000;
+    }
+    &:focus {
+        outline: none;
+    }
+}
