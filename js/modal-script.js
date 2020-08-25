@@ -13,6 +13,8 @@ document.addEventListener('click', event => {
 function showModal() {
     const typeModal = this.dataset.modal;
     const modalWrap = document.querySelector(typeModal);
+    // Добляем плавность всем поведениям модального окна
+    modalWrap.style.transition = '0.25s ease-out';
     // Показываем наш оверлей и окно
     modalWrap.classList.remove('hide-modal');
     // Убираем прокрутку
@@ -20,8 +22,8 @@ function showModal() {
 }
 
 //TODO Закрытие модального окна ---------------------------------------------------------------------
-const modalWindow = document.querySelector('.modal-wrap__for-button');
 const modalWrap = document.querySelector('.modal-wrap');
+const modalWindow = document.querySelector('.modal-wrap__for-button');
 const allModal = document.querySelectorAll('.modal-wrap');
 
 modalWindow.addEventListener('click', event => {
