@@ -22,6 +22,15 @@ body {
     visibility: visible;
     transition: .25s ease-out;
 }
+.modal-wrap__for-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 520px;
+}
+
 .modal-window {
     position: fixed;
     top: 50%;
@@ -30,8 +39,8 @@ body {
     transform: translate(-50%, -50%);
     width: 350px;
     height: 520px;
-    padding: 50px 30px 10px 30px;
     border-radius: 5px;
+    overflow: hidden;
     background: #fafffe;
     border: 2px solid #45cba9;
     box-shadow: 1px 1px 12px 1px #000;
@@ -58,6 +67,7 @@ body {
     text-align: center;
     box-shadow: 0px 0px 2px #000;
     cursor: pointer;
+    z-index: 100;
     transition: .25s ease-out;
     &:hover {
         box-shadow: 0px 0px 4px #000;
@@ -66,6 +76,19 @@ body {
     &:focus {
         outline: none;
     }
+}
+
+.modal-window__slider-container {
+    display: flex;
+    width: 700px;
+    height: 520px;
+    // background: #ff000033; // для проверки блок слайда
+    transition: all .3s ease-out;
+}
+
+.form-modal {
+    width: 350px;
+    padding: 50px 30px 10px 30px;
 }
 
 .form-modal__section1 {
@@ -142,7 +165,7 @@ body {
     & div:not(:first-child) {
         margin-left: 15px;
     }
-    // Снова переопределение бутстраповских радио только длоя 3 секции
+    // Снова переопределение бутстраповских радио только для 3 секции
     .custom-control-input:checked~.custom-control-label::before {
         color: #fff;
         border-color: #2ac39c;
@@ -151,6 +174,9 @@ body {
     .custom-control-label::before {
         border: none;
         background: #b8b8b8;
+    }
+    .custom-switch label {
+        cursor: pointer;
     }
     .custom-switch .custom-control-label::after {
         top: calc(.25rem + -1px);
@@ -163,9 +189,12 @@ body {
 }
 .form-modal__small-rules {
     font-size: .8rem;
-    > a {
-        text-decoration: underline;
-    }
+}
+.form-modal__link-rules {
+    font-size: .8rem;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .form-modal__section4 {
@@ -191,4 +220,18 @@ body {
     &:focus {
         outline: none;
     }
+}
+
+// Секция правила формы
+.modal-window__form-rules {
+    width: 346px;
+    max-height: 465px;
+    padding: 0 30px 10px 30px;
+    overflow: auto;
+    margin-top: 30px;
+    font-size: 14px;
+}
+// Класс для сдвига слайда туда-сюда
+.modal-window_slide-active {
+    margin-left: -350px;
 }

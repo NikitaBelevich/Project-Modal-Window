@@ -22,6 +22,16 @@ body {
   transition: .25s ease-out;
 }
 
+.modal-wrap__for-button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 350px;
+  height: 520px;
+}
+
 .modal-window {
   position: fixed;
   top: 50%;
@@ -32,8 +42,8 @@ body {
           transform: translate(-50%, -50%);
   width: 350px;
   height: 520px;
-  padding: 50px 30px 10px 30px;
   border-radius: 5px;
+  overflow: hidden;
   background: #fafffe;
   border: 2px solid #45cba9;
   -webkit-box-shadow: 1px 1px 12px 1px #000;
@@ -65,6 +75,7 @@ body {
   -webkit-box-shadow: 0px 0px 2px #000;
           box-shadow: 0px 0px 2px #000;
   cursor: pointer;
+  z-index: 100;
   -webkit-transition: .25s ease-out;
   transition: .25s ease-out;
 }
@@ -77,6 +88,21 @@ body {
 
 .close-modal:focus {
   outline: none;
+}
+
+.modal-window__slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  height: 520px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.form-modal {
+  width: 350px;
+  padding: 50px 30px 10px 30px;
 }
 
 .form-modal__section1 input:not(:first-child) {
@@ -201,6 +227,10 @@ body {
   background: #b8b8b8;
 }
 
+.form-modal__section3 .custom-switch label {
+  cursor: pointer;
+}
+
 .form-modal__section3 .custom-switch .custom-control-label::after {
   top: calc(.25rem + -1px);
   left: calc(-2.25rem + -1px);
@@ -215,8 +245,11 @@ body {
   font-size: .8rem;
 }
 
-.form-modal__small-rules > a {
+.form-modal__link-rules {
+  font-size: .8rem;
+  color: #007bff;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .form-modal__section4 {
@@ -252,4 +285,17 @@ body {
 
 .form-modal__submit:focus {
   outline: none;
+}
+
+.modal-window__form-rules {
+  width: 346px;
+  max-height: 465px;
+  padding: 0 30px 10px 30px;
+  overflow: auto;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.modal-window_slide-active {
+  margin-left: -350px;
 }

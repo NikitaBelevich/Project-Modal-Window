@@ -20,7 +20,7 @@ function showModal() {
 }
 
 //TODO Закрытие модального окна ---------------------------------------------------------------------
-const modalWindow = document.querySelector('.modal-window');
+const modalWindow = document.querySelector('.modal-wrap__for-button');
 const modalWrap = document.querySelector('.modal-wrap');
 const allModal = document.querySelectorAll('.modal-wrap');
 

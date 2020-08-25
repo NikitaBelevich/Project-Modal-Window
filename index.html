@@ -14,60 +14,95 @@
 
 <body>
 
-    <button class="modal-show" data-modal="#sign-in">Show window</button>
+    <button class="modal-show" data-modal="#sign-in">Open window</button>
     
     <div class="modal-wrap hide-modal" id="sign-in">
-        <!-- Окно -->
-        <div class="modal-window">
+        
+        <div class="modal-wrap__for-button"> <!-- Обёртка для выноса кнопки закрытия -->
             <button class="close-modal" data-modal="#sign-in">+</button>
+            <!-- Окно -->
+            <div class="modal-window">
+                <div class="modal-window__slider-container">
+                    <div>
+                        <form action="#" class="form-modal" autocomplete="off">
+                            <div class="form-modal__section1">
+                                <input class="form-modal_input" type="text" name="name" placeholder="Name"
+                                    maxlength="100">
+                                <input class="form-modal_input" type="email" name="email" placeholder="Email"
+                                    maxlength="200">
+                                <input class="form-modal_input" type="password" name="password" placeholder="Password"
+                                    maxlength="50">
+                            </div>
+                            <div class="form-modal__section2">
+                                <div class="form-modal_radio">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="cr1" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="cr1">Male</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="cr2" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="cr2">Female</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="cr3" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="cr3">Other</label>
+                                    </div>
+                                </div>
+                                <div class="form-modal_birth-inp">
+                                    <input class="form-modal_input" type="text" name="Birthday" placeholder="Birthday">
+                                </div>
+                            </div>
 
-            <form action="#" class="form-modal" autocomplete="off">
-                <div class="form-modal__section1">
-                    <input class="form-modal_input" type="text" name="name" placeholder="Name" maxlength="100">
-                    <input class="form-modal_input" type="email" name="email" placeholder="Email" maxlength="200">
-                    <input class="form-modal_input" type="password" name="password" placeholder="Password" maxlength="50">
-                </div>
-                <div class="form-modal__section2">
-                    <div class="form-modal_radio">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="cr1" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="cr1">Male</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="cr2" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="cr2">Female</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="cr3" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="cr3">Other</label>
-                        </div>
+                            <div class="form-modal__section3">
+                                <div class="form-modal__small-rules">No</div>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1"></label>
+                                </div>
+                                <div class="form-modal__small-rules">Yes, I read and agree <span
+                                        class="form-modal__link-rules" id="rules-forward">rules</span></div>
+                            </div>
+
+                            <div class="form-modal__section4">
+                                <button type="submit" class="form-modal__submit">Send</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-modal_birth-inp">
-                      <input class="form-modal_input" type="text" name="Birthday" placeholder="Birthday">  
+
+                    <div class="modal-window__form-rules">
+                        <span class="form-modal__link-rules" id="rules-back">...back</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium. Nemo quod
+                            quis quo labore veniam sit quisquam asperiores totam? Eum sunt architecto fugiat ducimus
+                            aliquid animi officiis, tempora aut.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium. Nemo quod
+                            quis
+                            quo labore veniam sit quisquam asperiores totam? Eum sunt architecto fugiat ducimus aliquid
+                            animi officiis, tempora aut.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium. Nemo quod
+                            quis
+                            quo labore veniam sit quisquam asperiores totam? Eum sunt architecto fugiat ducimus aliquid
+                            animi officiis, tempora aut.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium. Nemo quod
+                            quis
+                            quo labore veniam sit quisquam asperiores totam? Eum sunt architecto fugiat ducimus aliquid
+                            animi officiis, tempora aut.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, praesentium. Nemo quod
+                            quis quo labore veniam sit quisquam asperiores totam? Eum sunt architecto fugiat ducimus
+                            aliquid animi officiis, tempora aut.
+                        </p>
                     </div>
                 </div>
-
-                <div class="form-modal__section3">
-                    <div class="form-modal__small-rules">No</div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                        <label class="custom-control-label" for="customSwitch1"></label>
-                    </div>
-                    <div class="form-modal__small-rules">Yes, I read and agree <a href="#">rules</a></div>
-                </div>
-
-                <div class="form-modal__section4">
-                    <button type="submit" class="form-modal__submit">Send</button>
-                </div>
-
-            </form>
+            </div>
+            <!-- Окно -->
         </div>
-         <!-- Окно -->
+         
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous" defer></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" defer></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous" defer></script> -->
     
     <script src="./js/modal-script.js" defer></script>
     <script src="./js/modal-slider.js" defer></script>
